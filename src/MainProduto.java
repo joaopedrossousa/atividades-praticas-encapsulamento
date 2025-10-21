@@ -15,10 +15,30 @@ public class MainProduto {
         double valorProduto = entrada.nextDouble();
         produto.setPrecoProduto(valorProduto);
 
-        System.out.println("O produto cadastrado foi %s e ele custa R$%.2f...".formatted(produto.getNomeProduto(), produto.getPrecoProduto()));
+        System.out.println("Deseja aplicar desconto para vendas avista? [1] SIM [2] NÃO");
+        int opcaoDesconto = entrada.nextInt();
 
+        if (opcaoDesconto == 1){
+            System.out.println("Infome um percentual de desconto a ser aplicado, Ex: 10 == 10%: ");
+            int percentDesconto = entrada.nextInt();
+            System.out.println("---------------------------");
+            System.out.println("PRODUTO CADASTRADO");
+            System.out.println("---------------------------");
+            System.out.println("Nome do Produto: " +produto.getNomeProduto());
+            System.out.println("Preço Original: R$%.2f".formatted(produto.getPrecoProduto()));
+            System.out.println("Preço com Desconto: R$%.2f".formatted(produto.aplicaDesconto(percentDesconto)));
+
+
+        }else if (opcaoDesconto == 2){
+            System.out.println("---------------------------");
+            System.out.println("PRODUTO CADASTRADO");
+            System.out.println("---------------------------");
+            System.out.println("Nome do Produto: " +produto.getNomeProduto());
+            System.out.println("Preço Original: R$%.2f".formatted(produto.getPrecoProduto()));
+
+        }else{
+            System.out.println("Opção invalida...");
+        }
         entrada.close();
-
-
     }
 }

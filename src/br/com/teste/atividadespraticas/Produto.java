@@ -20,4 +20,9 @@ public class Produto {
         return precoProduto;
     }
 
+    public double aplicaDesconto(int desconto){
+        precoProduto = precoProduto - (precoProduto * desconto / 100);
+        return precoProduto;
+    }
+
 }
