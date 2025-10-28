@@ -2,7 +2,7 @@ import br.com.atv.atividadespraticas.Animal;
 import br.com.atv.atividadespraticas.Cachorro;
 import br.com.atv.atividadespraticas.Gato;
 
-public class MainANumal {
+public class MainAnimal {
     public static void main(String[] args) {
         Animal animal = new Animal();
         Cachorro cachorro = new Cachorro();
