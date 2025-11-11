@@ -1,6 +1,4 @@
 import br.com.formacaojava.atividades.Produto;
-
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,8 +11,16 @@ public class MainProdutos {
         Produto produtoUm = new Produto(1, "Arroz", 29.99, 10);
         Produto produtoDois = new Produto(2, "Feijão", 13.25, 20);
         Produto produtoTres = new Produto(3, "Café", 16.90, 20);
-        Produto produtoQuatro = new Produto(4, "Oléo", 9.99, 10);
+        Produto produtoQuatro = new Produto(4, "Óleo", 9.99, 10);
         Produto produtoCinco = new Produto(5, "Açucar", 6.90, 10);
+
+        //Implementação do atributo "Detalhes" aos produtos;
+        produtoUm.setDetalhe("Pacote com 3KG, Fabricação 11/11/25, Validade 11/11/2026");
+        produtoDois.setDetalhe("Pacote com 1KG, Fabricação 11/11/25, Validade 11/11/2026");
+        produtoTres.setDetalhe("Pacote com 1KG, Fabricação 11/11/25, Validade 11/11/2026");
+        produtoQuatro.setDetalhe("Embalagem com 600ML, Fabricação 11/11/25, Validade 11/11/2026");
+        produtoCinco.setDetalhe("Pacote com 1KG, Fabricação 11/11/25, Validade 11/11/2026");
+
 
         ArrayList<Produto> estoqueProdutos = new ArrayList<>();
         estoqueProdutos.add(produtoUm);
@@ -58,6 +64,7 @@ public class MainProdutos {
                 System.out.println("[1] Alterar Nome do Produto");
                 System.out.println("[2] Alterar Preço");
                 System.out.println("[3] Alterar Quantidade");
+                System.out.println("[4] Exibir Detalhes do Produto: ");
                 System.out.println();
                 System.out.println("[4] Menu Principal");
                 System.out.println("Selecione uma Opção: ");
@@ -83,6 +90,9 @@ public class MainProdutos {
                     int novaQuantidade = entrada.nextInt();
                     estoqueProdutos.get(idInformado - 1).setQuantidade(novaQuantidade);
                     System.out.println("Quantidade Alterada com sucesso...");
+                } else if (opcaoSelecionada == 4) {
+                    System.out.println("Produto Selecionado: " + estoqueProdutos.get(idInformado - 1).getNome());
+                    System.out.println(estoqueProdutos.get(idInformado - 1).toString());
                 }
 
 

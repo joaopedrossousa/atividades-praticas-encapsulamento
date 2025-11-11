@@ -5,6 +5,7 @@ public class Produto {
     private String nome;
     private  double preco;
     private int quantidade;
+    private String detalhe;
 
     //Construtor
     public Produto(int ID,String nome, double preco, int quantidade){
@@ -31,6 +32,9 @@ public class Produto {
         return ID;
     }
 
+    public String getDetalhe() {
+        return detalhe;
+    }
     //Setters
 
     public void setNome(String nome) {
@@ -43,5 +47,20 @@ public class Produto {
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
+    }
+
+    public void setDetalhe(String detalhe) {
+        this.detalhe = detalhe;
+    }
+
+    //Reformulação do metodo toString para a função "Exibir Detalhes Produto"
+    @Override
+    public String toString() {
+        return  "ID" + getID() + "\n" +
+                "Nome: " + getNome() + "\n" +
+                "Estoque Atual: " + getQuantidade() + "\n" +
+                "Preço Atual: " + String.format("%.2f", getPreco()) + "\n" +
+                "Detalhes: " + getDetalhe() + "\n"
+                ;
     }
 }
