@@ -1,4 +1,6 @@
 import br.com.formacaojava.atividades.Produto;
+import br.com.formacaojava.atividades.ProdutoPerecivel;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,13 +15,17 @@ public class MainProdutos {
         Produto produtoTres = new Produto(3, "Café", 16.90, 20);
         Produto produtoQuatro = new Produto(4, "Óleo", 9.99, 10);
         Produto produtoCinco = new Produto(5, "Açucar", 6.90, 10);
+        //Objeto da SubClasse Perecível
+        ProdutoPerecivel produtoSeis = new ProdutoPerecivel(6,"Filé Tilapia", 46.90, 30, "20/12/2025");
+
 
         //Implementação do atributo "Detalhes" aos produtos;
-        produtoUm.setDetalhe("Pacote com 3KG, Fabricação 11/11/25, Validade 11/11/2026");
-        produtoDois.setDetalhe("Pacote com 1KG, Fabricação 11/11/25, Validade 11/11/2026");
-        produtoTres.setDetalhe("Pacote com 1KG, Fabricação 11/11/25, Validade 11/11/2026");
-        produtoQuatro.setDetalhe("Embalagem com 600ML, Fabricação 11/11/25, Validade 11/11/2026");
-        produtoCinco.setDetalhe("Pacote com 1KG, Fabricação 11/11/25, Validade 11/11/2026");
+        produtoUm.setDetalhe("Pacote com 3KG, Produto  Não Perecível");
+        produtoDois.setDetalhe("Pacote com 1KG, Produto Não Perecível");
+        produtoTres.setDetalhe("Pacote com 1KG, Produto Não Perecível");
+        produtoQuatro.setDetalhe("Embalagem com 600ML, Não Produto Perecível");
+        produtoCinco.setDetalhe("Pacote com 1KG, Produto Não Perecível");
+        produtoSeis.setDetalhe("Embalagem com 600g, Produto Perecível");
 
 
         ArrayList<Produto> estoqueProdutos = new ArrayList<>();
@@ -28,6 +34,7 @@ public class MainProdutos {
         estoqueProdutos.add(produtoTres);
         estoqueProdutos.add(produtoQuatro);
         estoqueProdutos.add(produtoCinco);
+        estoqueProdutos.add(produtoSeis);
 
         Scanner entrada = new Scanner(System.in);
 
@@ -66,7 +73,7 @@ public class MainProdutos {
                 System.out.println("[3] Alterar Quantidade");
                 System.out.println("[4] Exibir Detalhes do Produto: ");
                 System.out.println();
-                System.out.println("[4] Menu Principal");
+                System.out.println("[4] Menu br.com.alura.screenmatch.principal.Principal");
                 System.out.println("Selecione uma Opção: ");
 
                 opcaoSelecionada = entrada.nextInt();
