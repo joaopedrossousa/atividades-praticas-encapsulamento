@@ -53,7 +53,7 @@ public class Produto {
         this.detalhe = detalhe;
     }
 
-    //Reformulação do metodo toString para a função "Exibir Detalhes Produto"
+    //Reformulação do metodo toString para a função "Exibir Detalhes br.com.teste.atividadespraticas.Produto"
     @Override
     public String toString() {
         return  "ID" + getID() + "\n" +

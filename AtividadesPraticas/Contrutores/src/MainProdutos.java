@@ -20,12 +20,12 @@ public class MainProdutos {
 
 
         //Implementação do atributo "Detalhes" aos produtos;
-        produtoUm.setDetalhe("Pacote com 3KG, Produto  Não Perecível");
-        produtoDois.setDetalhe("Pacote com 1KG, Produto Não Perecível");
-        produtoTres.setDetalhe("Pacote com 1KG, Produto Não Perecível");
-        produtoQuatro.setDetalhe("Embalagem com 600ML, Não Produto Perecível");
-        produtoCinco.setDetalhe("Pacote com 1KG, Produto Não Perecível");
-        produtoSeis.setDetalhe("Embalagem com 600g, Produto Perecível");
+        produtoUm.setDetalhe("Pacote com 3KG, br.com.teste.atividadespraticas.Produto  Não Perecível");
+        produtoDois.setDetalhe("Pacote com 1KG, br.com.teste.atividadespraticas.Produto Não Perecível");
+        produtoTres.setDetalhe("Pacote com 1KG, br.com.teste.atividadespraticas.Produto Não Perecível");
+        produtoQuatro.setDetalhe("Embalagem com 600ML, Não br.com.teste.atividadespraticas.Produto Perecível");
+        produtoCinco.setDetalhe("Pacote com 1KG, br.com.teste.atividadespraticas.Produto Não Perecível");
+        produtoSeis.setDetalhe("Embalagem com 600g, br.com.teste.atividadespraticas.Produto Perecível");
 
 
         ArrayList<Produto> estoqueProdutos = new ArrayList<>();
@@ -41,7 +41,7 @@ public class MainProdutos {
         while (true) {
             System.out.println();
             System.out.println("[1] Exibir Estoque");
-            System.out.println("[2] Selecionar Produto");
+            System.out.println("[2] Selecionar br.com.teste.atividadespraticas.Produto");
             System.out.println();
             System.out.println("[3] Sair");
             System.out.println();
@@ -64,14 +64,14 @@ public class MainProdutos {
                 }
                 System.out.println();
             } else if (opcaoSelecionada == 2) {
-                System.out.println("Infome o ID do Produto: ");
+                System.out.println("Infome o ID do br.com.teste.atividadespraticas.Produto: ");
                 int idInformado = entrada.nextInt();
                 System.out.println("Voce selecionou: " +  estoqueProdutos.get(idInformado - 1).getNome());
                 System.out.println();
-                System.out.println("[1] Alterar Nome do Produto");
+                System.out.println("[1] Alterar Nome do br.com.teste.atividadespraticas.Produto");
                 System.out.println("[2] Alterar Preço");
                 System.out.println("[3] Alterar Quantidade");
-                System.out.println("[4] Exibir Detalhes do Produto: ");
+                System.out.println("[4] Exibir Detalhes do br.com.teste.atividadespraticas.Produto: ");
                 System.out.println();
                 System.out.println("[4] Menu br.com.alura.screenmatch.principal.Principal");
                 System.out.println("Selecione uma Opção: ");
@@ -98,7 +98,7 @@ public class MainProdutos {
                     estoqueProdutos.get(idInformado - 1).setQuantidade(novaQuantidade);
                     System.out.println("Quantidade Alterada com sucesso...");
                 } else if (opcaoSelecionada == 4) {
-                    System.out.println("Produto Selecionado: " + estoqueProdutos.get(idInformado - 1).getNome());
+                    System.out.println("br.com.teste.atividadespraticas.Produto Selecionado: " + estoqueProdutos.get(idInformado - 1).getNome());
                     System.out.println(estoqueProdutos.get(idInformado - 1).toString());
                 }
 

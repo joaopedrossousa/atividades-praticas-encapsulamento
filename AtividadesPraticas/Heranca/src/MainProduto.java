@@ -7,11 +7,11 @@ public class MainProduto {
         Scanner entrada = new Scanner(System.in);
         Produto produto = new Produto();
 
-        System.out.println("Informe o nome do Produto: ");
+        System.out.println("Informe o nome do br.com.teste.atividadespraticas.Produto: ");
         String nomeProduto = entrada.nextLine();
         produto.setNomeProduto(nomeProduto);
 
-        System.out.println("Informe o valor do Produto: ");
+        System.out.println("Informe o valor do br.com.teste.atividadespraticas.Produto: ");
         double valorProduto = entrada.nextDouble();
         produto.setPrecoProduto(valorProduto);
 
@@ -24,7 +24,7 @@ public class MainProduto {
             System.out.println("---------------------------");
             System.out.println("PRODUTO CADASTRADO");
             System.out.println("---------------------------");
-            System.out.println("Nome do Produto: " +produto.getNomeProduto());
+            System.out.println("Nome do br.com.teste.atividadespraticas.Produto: " +produto.getNomeProduto());
             System.out.println("Preço Original: R$%.2f".formatted(produto.getPrecoProduto()));
             System.out.println("Preço com Desconto: R$%.2f".formatted(produto.aplicaDesconto(percentDesconto)));
 
@@ -33,7 +33,7 @@ public class MainProduto {
             System.out.println("---------------------------");
             System.out.println("PRODUTO CADASTRADO");
             System.out.println("---------------------------");
-            System.out.println("Nome do Produto: " +produto.getNomeProduto());
+            System.out.println("Nome do br.com.teste.atividadespraticas.Produto: " +produto.getNomeProduto());
             System.out.println("Preço Original: R$%.2f".formatted(produto.getPrecoProduto()));
 
         }else{
